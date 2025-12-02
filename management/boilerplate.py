@@ -1,7 +1,7 @@
 from src.lexer import Lexer
 from src.parser import Parser
-
-
+import math
+import string
 
 INTEGER = "INTEGER"
 PLUS = "PLUS"
@@ -22,7 +22,7 @@ class Tokens:
     def __repr__(self):
         return f"{self.type} {self.token}"
 
-import string
+
 
 class Lexer:
     def __init__(self, text):
@@ -84,7 +84,6 @@ class Lexer:
         return Tokens("EOF", None)
 
 
-import math
 
 class Parser:
     def __init__(self, lexer):
